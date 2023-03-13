@@ -45,3 +45,42 @@ let el = document.querySelector('h6');
 
 
 
+/*Gioco dei dadi
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto.
+*/
+
+// numeri in gioco
+let num1;
+let num2;
+
+const bNum1 = document.getElementById('bNum1');
+const bNum2 = document.getElementById('bNum2');
+const bVincitore = document.getElementById('bVincitore');
+
+// numero random del giocatore 1
+bNum1.addEventListener('click', function(){
+    num1 = getRandomInt(1, 6);
+    return document.getElementById('randomNumber1').innerHTML += num1;
+});
+
+
+// numero random del giocatore 2 
+bNum2.addEventListener('click', function(){
+    num2 = getRandomInt(1, 6);
+    return document.getElementById('randomNumber2').innerHTML += num2;
+});
+
+
+// funzione che estrae il vincitore
+bVincitore.addEventListener('click', function(){
+    if(num1 > num2){
+        return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-success">Giocatore 1 vince</h6>`;
+    } else if (num1 < num2){
+        return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-warning">Giocatore 2 vince</h6>`;
+    } else{
+        return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-danger">Parità</h6>`;
+    }
+})
+
+
