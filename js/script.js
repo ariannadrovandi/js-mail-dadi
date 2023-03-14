@@ -77,7 +77,7 @@ bVincitore.addEventListener('click', function(){
     if(num1 > num2){
         return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-success">Giocatore 1 vince</h6>`;
     } else if (num1 < num2){
-        return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-warning">Giocatore 2 vince</h6>`;
+        return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-success">Giocatore 2 vince</h6>`;
     } else{
         return document.getElementById('risultato').innerHTML += `<h6 class="text-center text-danger">Parità</h6>`;
     }
